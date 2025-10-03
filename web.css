@@ -1,0 +1,19 @@
+/* This file contains custom styles for the portfolio website.
+  The main styling is handled by Tailwind CSS, loaded via a CDN in index.html.
+*/
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.section-title {
+    /* This class was originally created using Tailwind's @apply directive:
+      @apply text-3xl font-bold text-gray-800 mb-8 text-center;
+    */
+    font-size: 1.875rem; /* 30px */
+    line-height: 2.25rem; /* 36px */
+    font-weight: 700;
+    color: #1f2937; /* text-gray-800 */
+    margin-bottom: 2rem; /* 32px */
+    text-align: center;
+}
