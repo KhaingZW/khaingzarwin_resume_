@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khaing Zar Win - Data Automation & Analytics Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .section-title {
+            @apply text-3xl font-bold text-gray-800 mb-8 text-center;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-700">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-gray-800">Khaing Zar Win</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#about" class="text-gray-600 hover:text-indigo-600 transition duration-300">About</a>
+                <a href="#experience" class="text-gray-600 hover:text-indigo-600 transition duration-300">Experience</a>
+                <a href="#projects" class="text-gray-600 hover:text-indigo-600 transition duration-300">Projects</a>
+                <a href="#skills" class="text-gray-600 hover:text-indigo-600 transition duration-300">Skills</a>
+                <a href="#contact" class="text-gray-600 hover:text-indigo-600 transition duration-300">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-800 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4">
+            <a href="#about" class="block py-2 text-gray-600 hover:text-indigo-600">About</a>
+            <a href="#experience" class="block py-2 text-gray-600 hover:text-indigo-600">Experience</a>
+            <a href="#projects" class="block py-2 text-gray-600 hover:text-indigo-600">Projects</a>
+            <a href="#skills" class="block py-2 text-gray-600 hover:text-indigo-600">Skills</a>
+            <a href="#contact" class="block py-2 text-gray-600 hover:text-indigo-600">Contact</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="bg-white">
+            <div class="container mx-auto px-6 py-20 md:py-32 flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 lg:w-3/5 text-center md:text-left mb-12 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Khaing Zar Win</h1>
+                    <p class="text-xl text-indigo-600 font-semibold mb-6">Data Automation & Analytics Specialist</p>
+                    <p class="text-lg text-gray-600 mb-8 max-w-xl mx-auto md:mx-0">
+                        Detail-oriented and results-driven professional with over 10 years of experience transforming complex data into actionable insights, driving business growth and operational efficiency through automation and visualization.
+                    </p>
+                    <div class="flex justify-center md:justify-start space-x-4">
+                        <a href="#contact" class="bg-indigo-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-indigo-700 transition duration-300">Contact Me</a>
+                        <a href="https://www.linkedin.com/in/khaingzarwin" target="_blank" class="bg-gray-200 text-gray-800 font-semibold py-3 px-6 rounded-lg hover:bg-gray-300 transition duration-300">View LinkedIn</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 lg:w-2/5 flex justify-center">
+                     <!-- 
+                        To add your professional headshot:
+                        1. Upload your image to a service like Imgur or a similar image hosting platform.
+                        2. Replace the 'src' value below with the direct link to your image.
+                        An ideal image size is around 400x400 pixels.
+                    -->
+                    <img src="https://placehold.co/400x400/EFEFEF/3B82F6?text=KZW&font=inter" alt="Khaing Zar Win" class="rounded-full shadow-2xl w-64 h-64 md:w-80 md:h-80 object-cover">
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">About Me</h2>
+                <div class="max-w-4xl mx-auto text-center text-lg text-gray-600 space-y-4">
+                    <p>
+                        I am a passionate data professional with a Bachelor's degree in Computer Science and a proven track record of leveraging data to solve complex business problems. My expertise lies in the entire data lifecycle, from extraction and cleaning to analysis, visualization, and automation.
+                    </p>
+                    <p>
+                        Throughout my career, I've developed a keen ability to bridge the gap between technical data operations and strategic business needs. I enjoy collaborating with diverse teams to build intuitive dashboards and automated workflows that not only save time and reduce errors but also empower stakeholders to make informed, data-driven decisions. I am committed to continuous learning and staying current with the latest technologies in the data space.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">Professional Experience</h2>
+                <div class="max-w-4xl mx-auto">
+                    <div class="relative border-l-2 border-indigo-200 pl-10 space-y-12">
+                         <!-- Atom -->
+                        <div class="relative">
+                            <div class="absolute -left-12 top-1 w-8 h-8 bg-indigo-600 rounded-full flex items-center justify-center text-white font-bold">A</div>
+                            <p class="text-sm font-semibold text-gray-500">Jun 2018 – Oct 2024</p>
+                            <h3 class="text-xl font-bold text-gray-800 mt-1">Manager, Reporting Visualization & Automation</h3>
+                            <p class="text-md font-semibold text-gray-600">Atom</p>
+                            <p class="mt-2 text-gray-600">Led data initiatives to support strategic goals by designing interactive Power BI and Tableau dashboards. Automated critical data workflows, resulting in a 40% reduction in manual effort and enhanced accuracy. Collaborated across marketing, OTT, and operations teams to deliver actionable insights.</p>
+                        </div>
+                        <!-- Ericsson Myanmar -->
+                        <div class="relative">
+                           <div class="absolute -left-12 top-1 w-8 h-8 bg-indigo-600 rounded-full flex items-center justify-center text-white font-bold">E</div>
+                            <p class="text-sm font-semibold text-gray-500">Aug 2016 – May 2018</p>
+                            <h3 class="text-xl font-bold text-gray-800 mt-1">Operation Support</h3>
+                            <p class="text-md font-semibold text-gray-600">Ericsson Myanmar</p>
+                            <p class="mt-2 text-gray-600">Generated key business insights through data extraction and transformation. Developed automation scripts using SQL and VBA that successfully cut the manual reporting workload by 50% and improved data accessibility for the operations team.</p>
+                        </div>
+                        <!-- Starvision -->
+                        <div class="relative">
+                            <div class="absolute -left-12 top-1 w-8 h-8 bg-indigo-600 rounded-full flex items-center justify-center text-white font-bold">S</div>
+                            <p class="text-sm font-semibold text-gray-500">May 2013 – Jul 2016</p>
+                            <h3 class="text-xl font-bold text-gray-800 mt-1">Application Engineer / Developer</h3>
+                            <p class="text-md font-semibold text-gray-600">Starvision Information Technology Pte. Ltd.</p>
+                            <p class="mt-2 text-gray-600">Developed and optimized complex SQL queries and stored procedures for enterprise POS systems. Built robust data integration workflows and developed web applications using .NET and JavaScript, leading to a 25% improvement in system performance and reporting efficiency.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">Key Projects</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <!-- Project 1 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                        <img src="https://placehold.co/600x400/3B82F6/FFFFFF?text=Data+Automation" alt="Data Automation Project" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-gray-800">Large-Scale Data Review Automation</h3>
+                            <p class="text-gray-600 mb-4">Built a comprehensive, SQL-based auditing framework to validate high-volume datasets automatically. This project significantly improved data compliance, accuracy, and freed up valuable team resources.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-indigo-100 text-indigo-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">SQL</span>
+                                <span class="bg-indigo-100 text-indigo-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">ETL</span>
+                                <span class="bg-indigo-100 text-indigo-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Data Governance</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                        <img src="https://placehold.co/600x400/10B981/FFFFFF?text=BI+Dashboard" alt="BI Dashboard Project" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-gray-800">Cross-Team Data Reporting Dashboard</h3>
+                            <p class="text-gray-600 mb-4">Designed and launched a suite of integrated Power BI dashboards. This initiative unified reporting across marketing, operations, and broadcast departments, providing a single source of truth and enabling faster decision-making.</p>
+                             <div class="flex flex-wrap gap-2">
+                                <span class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Power BI</span>
+                                <span class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Tableau</span>
+                                <span class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Data Visualization</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 3 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                        <img src="https://placehold.co/600x400/F59E0B/FFFFFF?text=ETL+Pipeline" alt="ETL Pipeline Project" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-gray-800">ETL Pipeline Automation</h3>
+                            <p class="text-gray-600 mb-4">Developed and deployed automated SQL-based ETL (Extract, Transform, Load) pipelines. This solution increased data processing and reporting efficiency by 30% while ensuring high levels of data integrity and consistency.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">SQL</span>
+                                <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">PostgreSQL</span>
+                                <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Data Engineering</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="max-w-5xl mx-auto">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="bg-gray-50 p-6 rounded-lg">
+                            <h3 class="text-xl font-bold text-gray-800 mb-4">Data Analysis & Management</h3>
+                            <ul class="space-y-2 text-gray-600">
+                                <li><strong>Databases:</strong> SQL (PostgreSQL, Oracle)</li>
+                                <li><strong>Languages:</strong> Python (Pandas, NumPy), VBA</li>
+                                <li><strong>Concepts:</strong> Data Cleansing, Data Modeling, Statistical Analysis</li>
+                            </ul>
+                        </div>
+                        <div class="bg-gray-50 p-6 rounded-lg">
+                            <h3 class="text-xl font-bold text-gray-800 mb-4">Visualization & Reporting</h3>
+                            <ul class="space-y-2 text-gray-600">
+                                <li><strong>Tools:</strong> Power BI, Tableau, Qlik Sense</li>
+                                <li><strong>Skills:</strong> Interactive Dashboard Design, KPI Tracking, Storytelling with Data</li>
+                            </ul>
+                        </div>
+                         <div class="bg-gray-50 p-6 rounded-lg">
+                            <h3 class="text-xl font-bold text-gray-800 mb-4">Automation & ETL</h3>
+                            <ul class="space-y-2 text-gray-600">
+                                <li><strong>Pipelines:</strong> SQL-based ETL Development</li>
+                                <li><strong>Techniques:</strong> Workflow Optimization, Process Automation, Scripting</li>
+                            </ul>
+                        </div>
+                         <div class="bg-gray-50 p-6 rounded-lg">
+                            <h3 class="text-xl font-bold text-gray-800 mb-4">Programming & Other</h3>
+                            <ul class="space-y-2 text-gray-600">
+                                <li><strong>Languages:</strong> VB.NET, C#.NET, Java, JavaScript</li>
+                                <li><strong>Compliance:</strong> Data Protection Audits, Security Reviews, Vendor Assessment</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="max-w-2xl mx-auto text-center">
+                    <p class="text-lg text-gray-600 mb-8">
+                        I'm always open to discussing new opportunities and challenges in the data analytics space. Feel free to reach out via email or connect with me on LinkedIn.
+                    </p>
+                    <div class="flex justify-center items-center space-x-6">
+                        <a href="mailto:sv.khaingzw@gmail.com" class="flex items-center text-lg text-indigo-600 hover:underline">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 mr-2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                            sv.khaingzw@gmail.com
+                        </a>
+                         <a href="https://www.linkedin.com/in/khaingzarwin" target="_blank" class="flex items-center text-lg text-indigo-600 hover:underline">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 mr-2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                           LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 Khaing Zar Win. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileMenuLinks = document.querySelectorAll('#mobile-menu a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
