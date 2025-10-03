@@ -7,28 +7,47 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
         }
         .section-title {
-            @apply text-3xl font-bold text-gray-800 mb-8 text-center;
+            @apply text-4xl font-extrabold text-gray-900 mb-4 text-center;
+        }
+        .section-subtitle {
+            @apply text-lg text-gray-600 mb-12 text-center max-w-2xl mx-auto;
+        }
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Custom styles for timeline icons */
+        .timeline-icon {
+            @apply absolute -left-[2.1rem] top-1 w-10 h-10 bg-white rounded-full flex items-center justify-center ring-8 ring-white;
+        }
+        .timeline-icon svg {
+             @apply w-5 h-5 text-blue-600;
         }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-700">
+<body class="bg-gray-50 text-gray-700 antialiased">
 
     <!-- Header & Navigation -->
-    <header class="bg-white shadow-md sticky top-0 z-50">
+    <header class="bg-white/90 backdrop-blur-md shadow-sm sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-gray-800">Khaing Zar Win</a>
-            <div class="hidden md:flex space-x-6">
-                <a href="#about" class="text-gray-600 hover:text-indigo-600 transition duration-300">About</a>
-                <a href="#experience" class="text-gray-600 hover:text-indigo-600 transition duration-300">Experience</a>
-                <a href="#projects" class="text-gray-600 hover:text-indigo-600 transition duration-300">Projects</a>
-                <a href="#skills" class="text-gray-600 hover:text-indigo-600 transition duration-300">Skills</a>
-                <a href="#contact" class="text-gray-600 hover:text-indigo-600 transition duration-300">Contact</a>
+            <a href="#" class="text-2xl font-bold text-gray-900 tracking-tight">Khaing Zar Win</a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#about" class="text-gray-600 hover:text-blue-600 font-medium transition duration-300">About</a>
+                <a href="#experience" class="text-gray-600 hover:text-blue-600 font-medium transition duration-300">Experience</a>
+                <a href="#projects" class="text-gray-600 hover:text-blue-600 font-medium transition duration-300">Projects</a>
+                <a href="#skills" class="text-gray-600 hover:text-blue-600 font-medium transition duration-300">Skills</a>
+                <a href="#contact" class="bg-blue-600 text-white font-semibold py-2 px-5 rounded-lg hover:bg-blue-700 transition duration-300 shadow-sm hover:shadow-md">Contact</a>
             </div>
             <div class="md:hidden">
                 <button id="mobile-menu-button" class="text-gray-800 focus:outline-none">
@@ -37,12 +56,12 @@
             </div>
         </nav>
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4">
-            <a href="#about" class="block py-2 text-gray-600 hover:text-indigo-600">About</a>
-            <a href="#experience" class="block py-2 text-gray-600 hover:text-indigo-600">Experience</a>
-            <a href="#projects" class="block py-2 text-gray-600 hover:text-indigo-600">Projects</a>
-            <a href="#skills" class="block py-2 text-gray-600 hover:text-indigo-600">Skills</a>
-            <a href="#contact" class="block py-2 text-gray-600 hover:text-indigo-600">Contact</a>
+        <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4 border-t border-gray-200">
+            <a href="#about" class="block py-2 text-gray-600 hover:text-blue-600">About</a>
+            <a href="#experience" class="block py-2 text-gray-600 hover:text-blue-600">Experience</a>
+            <a href="#projects" class="block py-2 text-gray-600 hover:text-blue-600">Projects</a>
+            <a href="#skills" class="block py-2 text-gray-600 hover:text-blue-600">Skills</a>
+            <a href="#contact" class="block py-2 text-gray-600 hover:text-blue-600">Contact</a>
         </div>
     </header>
 
@@ -50,74 +69,81 @@
     <main>
         <!-- Hero Section -->
         <section id="home" class="bg-white">
-            <div class="container mx-auto px-6 py-20 md:py-32 flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2 lg:w-3/5 text-center md:text-left mb-12 md:mb-0">
-                    <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Khaing Zar Win</h1>
-                    <p class="text-xl text-indigo-600 font-semibold mb-6">Data Automation & Analytics Specialist</p>
-                    <p class="text-lg text-gray-600 mb-8 max-w-xl mx-auto md:mx-0">
-                        Detail-oriented and results-driven professional with over 10 years of experience transforming complex data into actionable insights, driving business growth and operational efficiency through automation and visualization.
+            <div class="container mx-auto px-6 py-24 md:py-40 flex flex-col-reverse md:flex-row items-center">
+                <div class="md:w-3/5 text-center md:text-left mt-12 md:mt-0">
+                    <p class="text-lg text-blue-600 font-bold mb-2 tracking-wider">KHAING ZAR WIN</p>
+                    <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-6">Senior Data Automation & Analytics Specialist</h1>
+                    <p class="text-xl text-gray-600 mb-10 max-w-xl mx-auto md:mx-0">
+                        A results-oriented data professional with 10+ years of experience driving business efficiency through intelligent automation and actionable insights.
                     </p>
-                    <div class="flex justify-center md:justify-start space-x-4">
-                        <a href="#contact" class="bg-indigo-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-indigo-700 transition duration-300">Contact Me</a>
-                        <a href="https://www.linkedin.com/in/khaingzarwin" target="_blank" class="bg-gray-200 text-gray-800 font-semibold py-3 px-6 rounded-lg hover:bg-gray-300 transition duration-300">View LinkedIn</a>
+                    <div class="flex flex-col sm:flex-row justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#projects" class="bg-blue-600 text-white font-semibold py-3 px-8 rounded-lg hover:bg-blue-700 transition duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">View My Work</a>
+                        <!-- Add a link to your resume file here -->
+                        <a href="#" class="bg-white text-gray-800 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition duration-300 border border-gray-300">Download Resume</a>
                     </div>
                 </div>
-                <div class="md:w-1/2 lg:w-2/5 flex justify-center">
-                     <!-- 
-                        To add your professional headshot:
-                        1. Upload your image to a service like Imgur or a similar image hosting platform.
-                        2. Replace the 'src' value below with the direct link to your image.
-                        An ideal image size is around 400x400 pixels.
-                    -->
-                    <img src="https://placehold.co/400x400/EFEFEF/3B82F6?text=KZW&font=inter" alt="Khaing Zar Win" class="rounded-full shadow-2xl w-64 h-64 md:w-80 md:h-80 object-cover">
+                <div class="md:w-2/5 flex justify-center">
+                    <img src="https://i.imgur.com/your-professional-headshot.jpg" 
+                         onerror="this.onerror=null;this.src='https://placehold.co/400x400/EBF4FF/1E40AF?text=KZW&font=inter';" 
+                         alt="Professional headshot of Khaing Zar Win" 
+                         class="rounded-full shadow-2xl w-72 h-72 md:w-80 md:h-80 object-cover border-8 border-white">
                 </div>
             </div>
         </section>
 
         <!-- About Me Section -->
-        <section id="about" class="py-20">
+        <section id="about" class="py-24 fade-in-section">
             <div class="container mx-auto px-6">
                 <h2 class="section-title">About Me</h2>
-                <div class="max-w-4xl mx-auto text-center text-lg text-gray-600 space-y-4">
-                    <p>
-                        I am a passionate data professional with a Bachelor's degree in Computer Science and a proven track record of leveraging data to solve complex business problems. My expertise lies in the entire data lifecycle, from extraction and cleaning to analysis, visualization, and automation.
+                <div class="max-w-4xl mx-auto text-lg text-gray-700 space-y-6 text-left md:text-center">
+                    <p class="text-lg text-gray-600">
+                        I am a dedicated data professional with a Bachelor's in Computer Science and a career built on solving complex business challenges with data. My expertise covers the entire data lifecycle—from extraction, transformation, and cleansing to in-depth analysis, compelling visualization, and the creation of robust automation pipelines.
                     </p>
-                    <p>
-                        Throughout my career, I've developed a keen ability to bridge the gap between technical data operations and strategic business needs. I enjoy collaborating with diverse teams to build intuitive dashboards and automated workflows that not only save time and reduce errors but also empower stakeholders to make informed, data-driven decisions. I am committed to continuous learning and staying current with the latest technologies in the data space.
+                    <p class="text-lg text-gray-600">
+                        I excel at bridging the gap between technical data operations and strategic business objectives. By collaborating with diverse teams, I develop intuitive dashboards and automated workflows that not only save valuable time but empower stakeholders to make informed, data-driven decisions with confidence.
                     </p>
                 </div>
             </div>
         </section>
 
         <!-- Experience Section -->
-        <section id="experience" class="py-20 bg-white">
+        <section id="experience" class="py-24 bg-white fade-in-section">
             <div class="container mx-auto px-6">
                 <h2 class="section-title">Professional Experience</h2>
-                <div class="max-w-4xl mx-auto">
-                    <div class="relative border-l-2 border-indigo-200 pl-10 space-y-12">
+                <p class="section-subtitle">
+                    Over the past decade, I've had the privilege of working with great companies to architect and implement impactful data-centric solutions.
+                </p>
+                <div class="max-w-3xl mx-auto">
+                    <div class="relative border-l-2 border-blue-200 pl-12 space-y-16">
                          <!-- Atom -->
                         <div class="relative">
-                            <div class="absolute -left-12 top-1 w-8 h-8 bg-indigo-600 rounded-full flex items-center justify-center text-white font-bold">A</div>
+                            <div class="timeline-icon">
+                               <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            </div>
                             <p class="text-sm font-semibold text-gray-500">Jun 2018 – Oct 2024</p>
-                            <h3 class="text-xl font-bold text-gray-800 mt-1">Manager, Reporting Visualization & Automation</h3>
+                            <h3 class="text-xl font-bold text-gray-900 mt-1">Manager, Reporting Visualization & Automation</h3>
                             <p class="text-md font-semibold text-gray-600">Atom</p>
-                            <p class="mt-2 text-gray-600">Led data initiatives to support strategic goals by designing interactive Power BI and Tableau dashboards. Automated critical data workflows, resulting in a 40% reduction in manual effort and enhanced accuracy. Collaborated across marketing, OTT, and operations teams to deliver actionable insights.</p>
+                            <p class="mt-3 text-gray-600">Led initiatives to design interactive dashboards in Power BI & Tableau. Automated critical data workflows, reducing manual effort by 40% and enhancing accuracy. Collaborated across teams to deliver actionable insights.</p>
                         </div>
                         <!-- Ericsson Myanmar -->
                         <div class="relative">
-                           <div class="absolute -left-12 top-1 w-8 h-8 bg-indigo-600 rounded-full flex items-center justify-center text-white font-bold">E</div>
+                           <div class="timeline-icon">
+                              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            </div>
                             <p class="text-sm font-semibold text-gray-500">Aug 2016 – May 2018</p>
-                            <h3 class="text-xl font-bold text-gray-800 mt-1">Operation Support</h3>
+                            <h3 class="text-xl font-bold text-gray-900 mt-1">Operation Support</h3>
                             <p class="text-md font-semibold text-gray-600">Ericsson Myanmar</p>
-                            <p class="mt-2 text-gray-600">Generated key business insights through data extraction and transformation. Developed automation scripts using SQL and VBA that successfully cut the manual reporting workload by 50% and improved data accessibility for the operations team.</p>
+                            <p class="mt-3 text-gray-600">Generated key business insights via data extraction and transformation. Developed SQL and VBA automation scripts that cut manual reporting workload by 50% and improved data accessibility for operations.</p>
                         </div>
                         <!-- Starvision -->
                         <div class="relative">
-                            <div class="absolute -left-12 top-1 w-8 h-8 bg-indigo-600 rounded-full flex items-center justify-center text-white font-bold">S</div>
+                            <div class="timeline-icon">
+                               <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            </div>
                             <p class="text-sm font-semibold text-gray-500">May 2013 – Jul 2016</p>
-                            <h3 class="text-xl font-bold text-gray-800 mt-1">Application Engineer / Developer</h3>
+                            <h3 class="text-xl font-bold text-gray-900 mt-1">Application Engineer / Developer</h3>
                             <p class="text-md font-semibold text-gray-600">Starvision Information Technology Pte. Ltd.</p>
-                            <p class="mt-2 text-gray-600">Developed and optimized complex SQL queries and stored procedures for enterprise POS systems. Built robust data integration workflows and developed web applications using .NET and JavaScript, leading to a 25% improvement in system performance and reporting efficiency.</p>
+                            <p class="mt-3 text-gray-600">Developed and optimized SQL queries for enterprise POS systems. Built robust data integration workflows and developed .NET/JavaScript web applications, leading to a 25% improvement in system performance.</p>
                         </div>
                     </div>
                 </div>
@@ -125,46 +151,47 @@
         </section>
 
         <!-- Projects Section -->
-        <section id="projects" class="py-20">
+        <section id="projects" class="py-24 fade-in-section">
             <div class="container mx-auto px-6">
                 <h2 class="section-title">Key Projects</h2>
+                <p class="section-subtitle">
+                    Here are some of the key projects that showcase my expertise in automation, visualization, and data pipeline development.
+                </p>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                    <!-- Project 1 -->
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition duration-300">
-                        <img src="https://placehold.co/600x400/3B82F6/FFFFFF?text=Data+Automation" alt="Data Automation Project" class="w-full h-48 object-cover">
+                    <!-- Project Cards -->
+                     <div class="bg-white rounded-xl shadow-md overflow-hidden transform hover:-translate-y-2 transition-all duration-300 hover:shadow-xl border border-gray-100">
+                        <img src="https://placehold.co/600x400/1E40AF/FFFFFF?text=Automation" alt="Data Automation Project" class="w-full h-48 object-cover">
                         <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2 text-gray-800">Large-Scale Data Review Automation</h3>
-                            <p class="text-gray-600 mb-4">Built a comprehensive, SQL-based auditing framework to validate high-volume datasets automatically. This project significantly improved data compliance, accuracy, and freed up valuable team resources.</p>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="bg-indigo-100 text-indigo-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">SQL</span>
-                                <span class="bg-indigo-100 text-indigo-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">ETL</span>
-                                <span class="bg-indigo-100 text-indigo-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Data Governance</span>
+                            <h3 class="text-xl font-bold mb-3 text-gray-900">Large-Scale Data Review Automation</h3>
+                            <p class="text-gray-600 mb-4">Built an SQL-based auditing framework to validate high-volume datasets, significantly improving data compliance, accuracy, and team efficiency.</p>
+                            <div class="flex flex-wrap gap-2 pt-2">
+                                <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">SQL</span>
+                                <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">ETL</span>
+                                <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Data Governance</span>
                             </div>
                         </div>
                     </div>
-                    <!-- Project 2 -->
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition duration-300">
-                        <img src="https://placehold.co/600x400/10B981/FFFFFF?text=BI+Dashboard" alt="BI Dashboard Project" class="w-full h-48 object-cover">
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden transform hover:-translate-y-2 transition-all duration-300 hover:shadow-xl border border-gray-100">
+                        <img src="https://placehold.co/600x400/10B981/FFFFFF?text=Dashboard" alt="BI Dashboard Project" class="w-full h-48 object-cover">
                         <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2 text-gray-800">Cross-Team Data Reporting Dashboard</h3>
-                            <p class="text-gray-600 mb-4">Designed and launched a suite of integrated Power BI dashboards. This initiative unified reporting across marketing, operations, and broadcast departments, providing a single source of truth and enabling faster decision-making.</p>
-                             <div class="flex flex-wrap gap-2">
-                                <span class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Power BI</span>
-                                <span class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Tableau</span>
-                                <span class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Data Visualization</span>
+                            <h3 class="text-xl font-bold mb-3 text-gray-900">Cross-Team Reporting Dashboard</h3>
+                            <p class="text-gray-600 mb-4">Designed integrated Power BI dashboards to unify reporting across departments, providing a single source of truth and enabling faster decision-making.</p>
+                             <div class="flex flex-wrap gap-2 pt-2">
+                                <span class="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full">Power BI</span>
+                                <span class="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full">Tableau</span>
+                                <span class="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full">Data Visualization</span>
                             </div>
                         </div>
                     </div>
-                    <!-- Project 3 -->
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition duration-300">
-                        <img src="https://placehold.co/600x400/F59E0B/FFFFFF?text=ETL+Pipeline" alt="ETL Pipeline Project" class="w-full h-48 object-cover">
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden transform hover:-translate-y-2 transition-all duration-300 hover:shadow-xl border border-gray-100">
+                        <img src="https://placehold.co/600x400/F59E0B/FFFFFF?text=Pipeline" alt="ETL Pipeline Project" class="w-full h-48 object-cover">
                         <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2 text-gray-800">ETL Pipeline Automation</h3>
-                            <p class="text-gray-600 mb-4">Developed and deployed automated SQL-based ETL (Extract, Transform, Load) pipelines. This solution increased data processing and reporting efficiency by 30% while ensuring high levels of data integrity and consistency.</p>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">SQL</span>
-                                <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">PostgreSQL</span>
-                                <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Data Engineering</span>
+                            <h3 class="text-xl font-bold mb-3 text-gray-900">ETL Pipeline Automation</h3>
+                            <p class="text-gray-600 mb-4">Developed and deployed automated SQL-based ETL pipelines, increasing data processing and reporting efficiency by 30% while ensuring data integrity.</p>
+                            <div class="flex flex-wrap gap-2 pt-2">
+                                <span class="bg-yellow-100 text-yellow-800 text-sm font-medium px-3 py-1 rounded-full">SQL</span>
+                                <span class="bg-yellow-100 text-yellow-800 text-sm font-medium px-3 py-1 rounded-full">PostgreSQL</span>
+                                <span class="bg-yellow-100 text-yellow-800 text-sm font-medium px-3 py-1 rounded-full">Data Engineering</span>
                             </div>
                         </div>
                     </div>
@@ -173,39 +200,59 @@
         </section>
 
         <!-- Skills Section -->
-        <section id="skills" class="py-20 bg-white">
+        <section id="skills" class="py-24 bg-white fade-in-section">
             <div class="container mx-auto px-6">
-                <h2 class="section-title">Technical Skills</h2>
-                <div class="max-w-5xl mx-auto">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div class="bg-gray-50 p-6 rounded-lg">
-                            <h3 class="text-xl font-bold text-gray-800 mb-4">Data Analysis & Management</h3>
-                            <ul class="space-y-2 text-gray-600">
-                                <li><strong>Databases:</strong> SQL (PostgreSQL, Oracle)</li>
-                                <li><strong>Languages:</strong> Python (Pandas, NumPy), VBA</li>
-                                <li><strong>Concepts:</strong> Data Cleansing, Data Modeling, Statistical Analysis</li>
-                            </ul>
+                <h2 class="section-title">Core Competencies</h2>
+                <p class="section-subtitle">
+                    I possess a versatile skill set that covers the full spectrum of data analysis, management, and automation.
+                </p>
+                <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+                     <!-- Skill Item -->
+                    <div class="flex items-start space-x-5">
+                        <div class="flex-shrink-0">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                                <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path></svg>
+                            </div>
                         </div>
-                        <div class="bg-gray-50 p-6 rounded-lg">
-                            <h3 class="text-xl font-bold text-gray-800 mb-4">Visualization & Reporting</h3>
-                            <ul class="space-y-2 text-gray-600">
-                                <li><strong>Tools:</strong> Power BI, Tableau, Qlik Sense</li>
-                                <li><strong>Skills:</strong> Interactive Dashboard Design, KPI Tracking, Storytelling with Data</li>
-                            </ul>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Data Analysis & Management</h3>
+                            <p class="text-gray-600">SQL (PostgreSQL, Oracle), Python (Pandas, NumPy), VBA, Data Cleansing, Data Modeling.</p>
                         </div>
-                         <div class="bg-gray-50 p-6 rounded-lg">
-                            <h3 class="text-xl font-bold text-gray-800 mb-4">Automation & ETL</h3>
-                            <ul class="space-y-2 text-gray-600">
-                                <li><strong>Pipelines:</strong> SQL-based ETL Development</li>
-                                <li><strong>Techniques:</strong> Workflow Optimization, Process Automation, Scripting</li>
-                            </ul>
+                    </div>
+                    <!-- Skill Item -->
+                    <div class="flex items-start space-x-5">
+                         <div class="flex-shrink-0">
+                            <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
+                                <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a2 2 0 01-2 2H6a2 2 0 01-2-2V4z"></path></svg>
+                            </div>
                         </div>
-                         <div class="bg-gray-50 p-6 rounded-lg">
-                            <h3 class="text-xl font-bold text-gray-800 mb-4">Programming & Other</h3>
-                            <ul class="space-y-2 text-gray-600">
-                                <li><strong>Languages:</strong> VB.NET, C#.NET, Java, JavaScript</li>
-                                <li><strong>Compliance:</strong> Data Protection Audits, Security Reviews, Vendor Assessment</li>
-                            </ul>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Visualization & Reporting</h3>
+                            <p class="text-gray-600">Power BI, Tableau, Qlik Sense, Interactive Dashboard Design, KPI Tracking.</p>
+                        </div>
+                    </div>
+                     <!-- Skill Item -->
+                    <div class="flex items-start space-x-5">
+                         <div class="flex-shrink-0">
+                            <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center">
+                               <svg class="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Automation & ETL</h3>
+                            <p class="text-gray-600">SQL-based ETL Development, Workflow Optimization, Process Automation & Scripting.</p>
+                        </div>
+                    </div>
+                     <!-- Skill Item -->
+                    <div class="flex items-start space-x-5">
+                         <div class="flex-shrink-0">
+                            <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
+                               <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Programming & Compliance</h3>
+                            <p class="text-gray-600">VB.NET, C#.NET, Java, JavaScript, Data Protection Audits, Security Reviews.</p>
                         </div>
                     </div>
                 </div>
@@ -213,31 +260,29 @@
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="py-20">
+        <section id="contact" class="py-24 fade-in-section">
             <div class="container mx-auto px-6">
-                <h2 class="section-title">Get In Touch</h2>
-                <div class="max-w-2xl mx-auto text-center">
-                    <p class="text-lg text-gray-600 mb-8">
-                        I'm always open to discussing new opportunities and challenges in the data analytics space. Feel free to reach out via email or connect with me on LinkedIn.
+                <div class="bg-blue-600 rounded-2xl shadow-xl max-w-4xl mx-auto p-12 text-center text-white">
+                    <h2 class="text-4xl font-extrabold mb-4">Let's Build Something Great Together</h2>
+                    <p class="text-lg text-blue-100 mb-8 max-w-xl mx-auto">
+                        I'm actively seeking new opportunities to tackle challenging data problems. If you have a project in mind or are looking for a data expert to join your team, I'd love to connect.
                     </p>
-                    <div class="flex justify-center items-center space-x-6">
-                        <a href="mailto:sv.khaingzw@gmail.com" class="flex items-center text-lg text-indigo-600 hover:underline">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 mr-2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                            sv.khaingzw@gmail.com
-                        </a>
-                         <a href="https://www.linkedin.com/in/khaingzarwin" target="_blank" class="flex items-center text-lg text-indigo-600 hover:underline">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 mr-2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-                           LinkedIn
-                        </a>
-                    </div>
+                    <a href="mailto:sv.khaingzw@gmail.com" class="bg-white text-blue-600 font-bold py-3 px-8 rounded-lg hover:bg-blue-50 transition duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+                        Get In Touch
+                    </a>
                 </div>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-6">
-        <div class="container mx-auto px-6 text-center">
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-6 text-center text-gray-400">
+             <div class="flex justify-center space-x-6 mb-4">
+                <a href="https://www.linkedin.com/in/khaingzarwin" target="_blank" class="hover:text-white transition-colors">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd"/></svg>
+                </a>
+             </div>
             <p>&copy; 2024 Khaing Zar Win. All Rights Reserved.</p>
         </div>
     </footer>
@@ -257,6 +302,24 @@
                 mobileMenu.classList.add('hidden');
             });
         });
+
+        // Fade-in animation on scroll
+        const sections = document.querySelectorAll('.fade-in-section');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            rootMargin: '0px',
+            threshold: 0.15
+        });
+        sections.forEach(section => {
+            observer.observe(section);
+        });
     </script>
 </body>
 </html>
+
